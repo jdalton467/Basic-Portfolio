@@ -1,89 +1,220 @@
 body{
-	width:960;
 	margin:auto;
 	position: relative;
 }
 
 header{
-	/*position: relative;*/
+	position: relative;
 	background-color: #ffffff;
 	border-color: #cccccc;
-	border:solid;
+	/*border:solid;*/
 	margin:auto;
 	overflow: auto;
 	width:960px;
 
 }
+
+a{
+	color: #4aaaa5;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+
+
+
 .name{
 	/*position: absolute;*/
-	background-color: #ffffff;
-	border:solid;
-	border-color: #cccccc;
+	background-color: #4aaaa5;
+	color: #ffffff;
+	/*border:solid;*/
+	/*border-color: #cccccc;*/
+	font-family: Georgia, Times, serif;
 	text-align: center;
 	left:0;
 	float:left;
-	width: 650px;
-
-
+	width: 260px;
 }
-
 .links{
 	border-color: black;
-	border:solid;
+	/*border:solid;*/
 	bottom: 0px;
 	float:right;
+	margin-right: 5px;
+	position: absolute;
 	right:0px;
+	text-align: center;
 	width:270px;
 }
 
+.nav{
+	display: inline-block;
+	color:#cccccc;
+}
 
 
 .container{
+	position: relative;
 	background-color: #4aaaa5;
 	clear:both;
-	padding:100px;
+	margin-top:10px;
+	padding:60px 100px 80px 100px;
+	overflow: auto;
 	width:960px;
+	z-index: 0;
 }
 
 #background{
 	background-image: url(../images/cork-wallet.jpg);
 	margin:auto;
-	height: 100%;
 	width: 960px;
-	z-index: 2;
+	z-index: 1;
 }
 
 
 
 .content{
 	background-color: #ffffff;
-	border:solid;
-	border-color: black;
-	margin-right: 20px;
-	float: left;
+	/*border:solid;*/
+	/*border-color: black;*/
+	font-color: #4aaaa5;
+	margin-left: -20px;
+	margin-right: 10px;
+	float:left;
+	padding: 10px;
+	padding-left: 30px;
+	overflow: auto;
 	width: 650px;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#666666;
 }
 
-.sidebar{
-	border:solid;
-	border-color: red;
+
+
+.titlehead{
+	width:650px;
+	border-bottom: solid;
+	border-bottom-color: #cccccc;
+	margin-bottom: 15px;
+	overflow: auto;
+}
+
+.title{
+	font-family: Georgia, Times, serif;
+	color:#4aaaa5;
+}
+
+
+.about{
+	font-family: Arial, Helvetica, sans-serif;
+	color:#666666;
+	line-height: 30px;
+	word-spacing: 5px;
+}
+
+#profile{
 	float: left;
+	margin: 15px;
+	height: 300px;
+	width: 400px;
+}
+
+
+.sidebar{
+	background-color: #ffffff;
+	/*border:solid;*/
+	/*border-color: red;*/
+	font-color:#4aaaa5;
+	float: right;
+	padding-bottom: 30px;
+	text-align: center;
 	width:270px;
 }
+
+#contacthead{
+	width:200px;
+	border-bottom: solid;
+	border-bottom-color: #cccccc;
+	overflow: auto;
+	margin:auto;
+	margin-bottom: 15px;
+}
+
+#connect{
+	font-family: Georgia, Times, serif;
+	color:#4aaaa5;
+}
+
+#connecthead{
+	width:590px;
+	border-bottom: solid;
+	border-bottom-color: #cccccc;
+	overflow: auto;
+	margin-bottom: 15px;
+	margin-top: 20px;
+		font-family: Georgia, Times, serif;
+	color:#4aaaa5;
+
+}
+
+
+.form{
+	width: 590px;
+	height: 35px;
+}
+
+#Message{
+	width: 590px;
+	height: 200px;
+}
+
+#Email{
+	background-color: #4aaaa5;
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+
+
+.portdiv{
+	margin-left: 40px;
+	margin-bottom: 40px;
+	float: left;
+}
+
+.banner{
+	width: 250px;
+	height: 50px;
+	background-color: #4aaaa5;
+	margin-top: -90px;
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	color: #ffffff;
+	font-family: Georgia, Times, serif;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+
+
 
 
 
 
 img{
-	height: 63px;
-	width: 63px;
+	margin:auto;
 }
 
 
-
 footer{
+	position: absolute;
 	background-color: #666666;
+	border-top: 5px solid #4aaaa5;
+	bottom:0px;
 	clear: both;
+	left: 0px;
 	margin: auto;
-	width: 960px;
+	width:1160px;
+	color: #ffffff;
+	text-align: center;
 }
