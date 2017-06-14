@@ -168,9 +168,15 @@ a{
 	height: 200px;
 }
 
-#Email{
+#button{
 	background-color: #4aaaa5;
-	font-family: Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	font-family: Georgia, Times, serif;
+	/*height: 50px*/
+	width: 120px;
+
+	border-style: none;
+
 	
 }
 
@@ -194,6 +200,13 @@ a{
 	padding-top: 5px;
 	padding-bottom: 5px;
 
+}
+
+#separator{
+	width: 75px;
+	border-left: solid #cccccc 1px;
+	border-right: solid #cccccc 1px;
+	
 }
 
 
