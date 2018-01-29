@@ -27,4 +27,3 @@ $headers = "From: $email_from \r\n";
 
 mail($to, $email_subject, $email_body, $headers); //Send email
 
-?>
