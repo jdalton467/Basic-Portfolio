@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Portfolio</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<title>index</title>
 	</head>
 	<body>
-		<header>
-			<div class="name">
+		<div class="container" id="nav-container">
+			<div id="nav-bar">
 				<h2>James Dalton</h2>
+				<ul id="nav-list">
+					<li>About</li>
+					<li>Projects</li>
+					<li>Contact</li>
+				</ul>
 			</div>
-			<div class="links">
-				
-				<p class="nav"><a href="index.html">About</a></p>
-				
-				<p class="nav" id="separator"><a href="portfolio.html">Portfolio</a></p>
-				
-				
-				
-				<p class="nav"><a href="contact.html">Contact</a></p>
-				
-				
-			</div>
-		</header>
-		<div class="container" id="background">
-			
-			<section class="content">
-				
-				<div class="titlehead">
-					<h2 class="title">About Me</h2>
-				</div>
-				<img id="profile" src="assets/images/ProfilePic.png">
-				<p class="about">Hello there! My name is James Dalton and I an aspiring webdeveloper. One of
-					my main interests is mobile development. Someday, I would like to be able to create
-					a game that is enjoyable for everyone. As for my career aspirations, I would prefer to
-					go into free-lance work, or even more ideal, create my own tech start-up. It will be
-				a long road, but it will definitely be worth it in the end.</p>
-				<p class ="about">I came to Rutger's Coding Bootcamp because I wanted a chance to increase my skill set for the workforce, be challenged, and have fun while doing it! I plan to put a lot of work into this, and I hope I get a lot out of it.</p>
-				<p class="about">Some of my hobbies include running, listening to live music, and playing(or at least trying)to play live music.</p>
-			</section>
-			<div class="sidebar">
-				
-				<div id="contacthead">
-					<h3 id="connect">Connect with Me</h3>
-				</div>
-				<img src="assets/images/github.png" alt="github" height="63" width="63">
-				<img src="assets/images/linkedin.png" alt="linkedin" height="63" width="63">
-				<img src="assets/images/stackoverflow.png" alt="stackoverflow" height="63" width="63">
-			</div>
-			<footer>
-				<h4>&copy;James Dalton</h4>
-			</footer>
-			
 		</div>
+		<div class="container" id="about-container">
+			<img src="assets/images/ProfilePic.png" alt="profile-pic">
+			<div id="bio-wrapper">
+				<h2>About</h2>
+				<p>Hello, my name is James, and I am an aspiring web-developer. One of the main reasons I decided to get into web-devlopment, was because I love coding and I wante to make my mark on the world by providing a useful service</p>
+				<p>My core compentencies reside in the fundamentals of HTML, CSS, and JavaScript. Libraries are fine, but for right now, I want to become an expert in those three cornerstone technologies</p>
+				<p>I love to learn everyday, as I am always surprised by the amount of information that is out there. I contribute to GitHub on a regular basis and I hope one day to become a senior developer with an expertise in JavaScript</p>
+				<p>Feel free to peruse my projects shown below, and if interested, contact me about any questions or comments you might have!</p>
+			</div>
+		</div>
+		<br><br>
+		<div class="container" id="projects-container">
+			<ul class="project-list">
+				<li><div class="project-panel">WorldScoop</div></li>
+				<li><div class="project-panel">WorldScoop2</div></li>
+				<li><div class="project-panel">Trivia</div></li>
+			</ul>
+			<ul class="project-list">
+				<li><div class="project-panel">LIRI</div></li>
+				<li><div class="project-panel">Bamazon</div></li>
+				<li><div class="project-panel">Octagon</div></li>
+			</ul>
+		</div>
+		<form action="form-to-email.php" method="post" enctype="text/plain" name="myemailform">
+			Name:<br>
+			<input type="text" name="name"><br>
+			E-mail:<br>
+			<input type="text" name="mail"><br>
+			Comment:<br>
+			<input type="text" name="comment" size="50"><br><br>
+			<input type="submit" value="Send">
+			<input type="reset" value="Reset">
+		</form>
+		<div class="container" id="footer-container"> &copy; James Dalton</div>
 	</body>
 </html>
