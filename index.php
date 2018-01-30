@@ -1,19 +1,24 @@
 <?php
-
-if($_POST["submit"]) {
-    $recipient="your@email.address";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-
+    require '../vendor/autoload.php';
+    use Mailgun\Mailgun;
+    session_start();
+    if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message =  $_POST['message'];
+        # Instantiate the client.
+        $mgClient = new Mailgun('key-xxxxxxxx');
+        $domain = "mail.laurenfazah.com";
+        # Make the call to the client.
+        $result = $mgClient->sendMessage($domain, array(
+            'from'    => $name . ' <' . $email . '>',
+            'to'      => 'Lauren <example@gmail.com>',
+            'subject' => 'Portfolio Message',
+            'text'    => $message
+        ));
+    }
+    header( 'Location: /' ) ;
+    session_destroy();
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,18 +60,14 @@ if($_POST["submit"]) {
 				<li><div class="project-panel">Octagon</div></li>
 			</ul>
 		</div>
-	    <form method="post" action="index.php">
-        <label>Name:</label>
-        <input name="sender">
-
-        <label>Email address:</label>
-        <input name="senderEmail">
-
-        <label>Message:</label>
-        <textarea rows="5" cols="20" name="message"></textarea>
-
-        <input type="submit" name="submit">
-    </form>
+		<form  method="post" name="contact_form" action="form.php">
+			<h1>want to chat?</h1>
+			<input type="text" name="name" placeholder="name" required>
+			<input type="email" name="email" placeholder="email" required>
+			<textarea name="message" cols="30" rows="10" placeholder="drop a message..." required></textarea>
+			<input type="submit" value="send off" name="submit">
+			<h1 class="email-thanks"></h1>
+		</form>
 		<div class="container" id="footer-container"> &copy; James Dalton</div>
 	</body>
 </html>
