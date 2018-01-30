@@ -30,15 +30,25 @@ body{
 #about-container{
 	overflow: auto;
 	border: dotted black 1px;
+	padding: 10px;
+}
+
+#pic-container{
+	border: 1px dotted black;
+	height: 400px;
+	width: 500px;
+	display: inline-block;
+	float: left;
 }
 
 #bio-wrapper{
 	width: 45%;
-	height: 35%;
+	height: 60%;
 	position: absolute;
 	right: 10%;
 	padding: 10px;
 	text-align: center;
+	border: 1px black dotted;
 }
 
 h2{
@@ -88,6 +98,27 @@ p{
 	border: dotted black 1px;
 	margin: auto;
 }
+
+
+.social-media-list{
+	list-style-type: none;
+	width: 50%;
+	margin: auto;
+}
+
+.social-media-list li{
+	display: inline-block;
+	width: 31%;
+}
+
+
+.social-media-panel{
+	border: dotted black 1px;
+	height: 100px;
+	width: 100px;
+	margin: auto;
+}
+
 
 #footer-container{
 	width: 97%;
