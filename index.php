@@ -51,7 +51,7 @@ if($_POST["message"]){
 				<li><div class="project-panel">Octagon</div></li>
 			</ul>
 		</div>
-		<form method="post" action="contact.php">
+		<form method="post" action="index.php">
 			<label>Name:</label>
 			<input name="sender">
 			<label>Email address:</label>
