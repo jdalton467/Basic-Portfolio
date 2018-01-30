@@ -1,3 +1,12 @@
+
+<?php
+if($_POST['message']){
+	mail('jamesdalton463@gmail.com', 'Form to email message', $_POST['message'], 'From: an@email.address');
+} 
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,7 +14,6 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
-		<?php require 'form-to-email.php'?>
 		<div class="container" id="nav-container">
 			<div id="nav-bar">
 				<h2>James Dalton</h2>
@@ -39,15 +47,9 @@
 				<li><div class="project-panel">Octagon</div></li>
 			</ul>
 		</div>
-		<form action="form-to-email.php" method="post" enctype="text/plain" name="myemailform">
-			Name:<br>
-			<input type="text" name="name"><br>
-			E-mail:<br>
-			<input type="text" name="mail"><br>
-			Comment:<br>
-			<input type="text" name="message" size="50"><br><br>
-			<input type="submit" value="Send">
-			<input type="reset" value="Reset">
+		<form method="post" action="index.php">
+			<textarea name="message"></textarea>
+			<input type="submit">
 		</form>
 		<div class="container" id="footer-container"> &copy; James Dalton</div>
 	</body>
