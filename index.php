@@ -1,19 +1,33 @@
 <?php
-
-if($_POST["submit"]) {
-    $recipient="your@email.address";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
+$curl = curl_init();
+$name = $_POST['name'];
+$email = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
+curl_setopt_array($curl, array(
+CURLOPT_URL => "https://api.sendgrid.com/v3/mail/send",
+CURLOPT_RETURNTRANSFER => true,
+CURLOPT_ENCODING => "",
+CURLOPT_MAXREDIRS => 10,
+CURLOPT_TIMEOUT => 30,
+CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+CURLOPT_CUSTOMREQUEST => "POST",
+CURLOPT_POSTFIELDS => "{\n  \"personalizations\": [\n    {\n      \"to\": [\n        {\n          \"email\": \"jamesdalton463@gmail.com\"\n        }\n      ],\n      \"subject\": \"New Contact\"\n    }\n  ],\n  \"from\": {\n    \"email\": \"$email\"\n  },\n  \"content\": [\n    {\n      \"type\": \"text/html\",\n      \"value\": \"$name<br>$email<br>$subject<br>$message\"\n    }\n  ]\n}",
+CURLOPT_HTTPHEADER => array(
+"authorization: Bearer [SG API key]",
+"cache-control: no-cache",
+"content-type: application/json"
+),
+));
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+header('Location: thanks.html');
+if ($err) {
+echo "cURL Error #:" . $err;
+} else {
+echo $response;
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,18 +69,25 @@ if($_POST["submit"]) {
 				<li><div class="project-panel">Octagon</div></li>
 			</ul>
 		</div>
-	    <form method="post" action="index.php">
-        <label>Name:</label>
-        <input name="sender">
-
-        <label>Email address:</label>
-        <input name="senderEmail">
-
-        <label>Message:</label>
-        <textarea rows="5" cols="20" name="message"></textarea>
-
-        <input type="submit" name="submit">
-    </form>
-		<div class="container" id="footer-container"> &copy; James Dalton</div>
-	</body>
+		<!-- BEGINNING OF CONTACT FORM -->
+		<div class="section-page-landing" id="contact">
+			<div class="inner-section">
+				<div class="contain">
+					<center><h2>Contact Me</h2>
+					<form class="contact" action="index.php" method="post">
+						<p>Name:</p> <!-- Can choose to customize form.html inputs starting here as needed, but be sure to reference any changes in mailer.php post fields-->
+						<input type="text" name="name" />
+						<p>E-mail:</p>
+						<input type="text" name="email" />
+						<p>Subject:</p>
+						<input type="text" name="subject" />
+						<p>Message:</p>
+					<textarea name="message" syle="width: 45%; text-align: center;">Please leave a short message here</textarea></p>
+					<input class="send" type="submit" value="Send"> <!-- Send button-->
+				</form></center>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="footer-container"> &copy; James Dalton</div>
+</body>
 </html>
