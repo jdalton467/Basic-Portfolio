@@ -15,7 +15,7 @@ $message = $_POST['message'];
 //Validate first
 if(empty($name) || empty($visitor_email))
 {  //Validate
-	echo "Name and email are mandatory!";
+	// echo "Name and email are mandatory!";
 	exit;
 }
 
