@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
+		<?php require 'form-to-email.php'?>
 		<div class="container" id="nav-container">
 			<div id="nav-bar">
 				<h2>James Dalton</h2>
