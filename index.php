@@ -1,32 +1,33 @@
 <?php
-$curl = curl_init();
+$errors = '';
+$myemail = 'yourname@website.com';//<-----Put Your email address here.
+if(empty($_POST['name'])  ||
+empty($_POST['email']) ||
+empty($_POST['message']))
+{
+$errors .= "\n Error: all fields are required";
+}
 $name = $_POST['name'];
-$email = $_POST['email'];
-$subject = $_POST['subject'];
+$email_address = $_POST['email'];
 $message = $_POST['message'];
-curl_setopt_array($curl, array(
-CURLOPT_URL => "https://api.sendgrid.com/v3/mail/send",
-CURLOPT_RETURNTRANSFER => true,
-CURLOPT_ENCODING => "",
-CURLOPT_MAXREDIRS => 10,
-CURLOPT_TIMEOUT => 30,
-CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-CURLOPT_CUSTOMREQUEST => "POST",
-CURLOPT_POSTFIELDS => "{\n  \"personalizations\": [\n    {\n      \"to\": [\n        {\n          \"email\": \"jamesdalton463@gmail.com\"\n        }\n      ],\n      \"subject\": \"New Contact\"\n    }\n  ],\n  \"from\": {\n    \"email\": \"jamesdalton463@gmail.com\"\n  },\n  \"content\": [\n    {\n      \"type\": \"text/html\",\n      \"value\": \"$name<br>$email<br>$subject<br>$message\"\n    }\n  ]\n}",
-CURLOPT_HTTPHEADER => array(
-"authorization: Bearer ",
-"cache-control: no-cache",
-"content-type: application/json"
-),
-));
-$response = curl_exec($curl);
-$err = curl_error($curl);
-curl_close($curl);
-// header('Location: index.php');
-if ($err) {
-echo "cURL Error #:" . $err;
-} else {
-echo $response;
+if (!preg_match(
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
+$email_address))
+{
+$errors .= "\n Error: Invalid email address";
+}
+if( empty($errors))
+{
+$to = $myemail;
+$email_subject = "Contact form submission: $name";
+$email_body = "You have received a new message. ".
+" Here are the details:\n Name: $name \n ".
+"Email: $email_address\n Message \n $message";
+$headers = "From: $myemail\n";
+$headers .= "Reply-To: $email_address";
+mail($to,$email_subject,$email_body,$headers);
+//redirect to the 'thank you' page
+header('Location: contact-form-thank-you.html');
 }
 ?>
 <!DOCTYPE html>
@@ -73,21 +74,19 @@ echo $response;
 		<div class="section-page-landing" id="contact">
 			<div class="inner-section">
 				<div class="contain">
-					<center><h2>Contact Me</h2>
-					<form class="contact" action="index.php" method="post">
-						<p>Name:</p> <!-- Can choose to customize form.html inputs starting here as needed, but be sure to reference any changes in mailer.php post fields-->
-						<input type="text" name="name" />
-						<p>E-mail:</p>
-						<input type="text" name="email" />
-						<p>Subject:</p>
-						<input type="text" name="subject" />
-						<p>Message:</p>
-					<textarea name="message" syle="width: 45%; text-align: center;">Please leave a short message here</textarea></p>
-					<input class="send" type="submit" value="Send"> <!-- Send button-->
-				</form></center>
+					<form method="post" name="contact_form"
+						action="contact-form-handler.php">
+						Your Name:
+						<input type="text" name="name">
+						Email Address:
+						<input type="text" name="email">
+						Message:
+						<textarea name="message"></textarea>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container" id="footer-container"> &copy; James Dalton</div>
-</body>
+		<div class="container" id="footer-container"> &copy; James Dalton</div>
+	</body>
 </html>
