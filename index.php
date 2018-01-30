@@ -22,7 +22,7 @@ CURLOPT_HTTPHEADER => array(
 $response = curl_exec($curl);
 $err = curl_error($curl);
 curl_close($curl);
-header('Location: index.php');
+// header('Location: index.php');
 if ($err) {
 echo "cURL Error #:" . $err;
 } else {
