@@ -5,12 +5,18 @@ body{
 	background-image: url("../images/background5.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	padding: 0;
+	margin: 0;
 }
 
+a{
+	text-decoration: none;
+	color: white;
+}
 
 #nav-container{
 	width: 100%;
-	border: dotted black 1px;
+	border: solid black 2px;
 	left: 0px;
 }
 
@@ -32,7 +38,7 @@ body{
 	display: inline;
 	padding-left: 20px;
 	padding-right: 20px;
-	border: 1px dotted black;
+	border: 1px solid black;
 	padding-top:20px;
 	padding-bottom: 20px;
 	border-radius: 20%;
@@ -41,12 +47,12 @@ body{
 
 #about-container{
 	height: 575px;
-	border: dotted black 1px;
+	border: solid black 1px;
 	padding: 10px;
 }
 
 #pic-container{
-	border: 1px dotted black;
+	border: 1px solid black;
 	height: 560px;
 	width: 560px;
 	display: inline-block;
@@ -62,7 +68,7 @@ body{
 	right: 5%;
 	padding: 15px;
 	text-align: center;
-	border: 1px black dotted;
+	border: 1px black solid;
 	border-radius: 100%;
 	background-color: white;
 }
@@ -104,7 +110,7 @@ p{
 #projects-container{
 	width: 100%;
 	display: block;
-	border: 1px dotted black;
+	border: 1px solid black;
 	margin: auto;
 }
 
@@ -112,33 +118,53 @@ p{
 .project-list{
 	list-style-type: none;
 	width: 100%;
+	position: relative;
 }
 
 .project-list li{
 	display: inline-block;
 	width: 31%;
 	text-align: center;
+	position: relative;
+	z-index: 1;
 }
 
 
 .project-panel{
 	height: 300px;
 	width: 300px;
-	border: dotted black 1px;
+	/*border: solid black 3px;*/
 	margin: auto;
 	border-radius: 100%;
 	display: inline-block;
+	position: relative;
+	z-index: 1;
 }
 
 
 .project-panel img{
 	height: 300px;
 	width: 300px;
-	border: dotted black 1px;
+	border: solid black 2px;
 	margin: auto;
 	border-radius: 100%;
 	display: inline-block;
-	float: left;
+	position: relative;
+	z-index: 1;
+}
+
+.banner{
+	width: 300px;
+	border: solid 1px red;
+	background-color: #FF531F;
+	position: relative;
+	margin: auto;
+	z-index: 3;
+	text-align: center;
+	top: 5px;
+	color: white;
+	font-size: 18px;
+	padding: 5px;
 }
 
 
@@ -155,7 +181,14 @@ p{
 
 
 .social-media-panel{
-	border: dotted black 1px;
+	height: 100px;
+	width: 100px;
+	margin: auto;
+	border-radius: 100%;
+}
+
+.social-media-panel img{
+	border: solid black 2px;
 	height: 100px;
 	width: 100px;
 	margin: auto;
@@ -163,12 +196,9 @@ p{
 }
 
 
-
-
-
 #footer-container{
-	width: 97%;
-	border: dotted black 1px;
-	padding: 20px;
+	width: 94%;
+	border: solid black 2px;
+	padding: 40px;
 	text-align: center;
 }
