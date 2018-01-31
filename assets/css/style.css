@@ -6,8 +6,12 @@
 /*font-family: 'Hanalei Fill', cursive;*/
 
 
-body{
+html,body{
 	overflow-x: hidden;
+}
+
+
+body{
 	border: 1px dotted black;
 	background-image: url("../images/background5.jpg");
 	background-repeat: no-repeat;
