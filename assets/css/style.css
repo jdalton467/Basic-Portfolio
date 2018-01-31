@@ -1,4 +1,11 @@
 
+
+/*font-family: 'Baloo Paaji', cursive;*/
+/*font-family: 'Belgrano', serif;*/
+/*font-family: 'Overlock SC', cursive;*/
+/*font-family: 'Hanalei Fill', cursive;*/
+
+
 body{
 	overflow-x: hidden;
 	border: 1px dotted black;
@@ -9,6 +16,11 @@ body{
 	margin: 0;
 }
 
+@font-face {
+    font-family: 'Almonte'; /*a name to be used later*/
+    src: url('http://www.1001fonts.com/wood-fonts.html'); /*URL to font*/
+}
+
 a{
 	text-decoration: none;
 	color: white;
@@ -16,36 +28,49 @@ a{
 
 #nav-container{
 	width: 100%;
-	border: solid black 2px;
+	/*border: solid black 2px;*/
 	left: 0px;
 }
 
 #nav-bar{
+	background-image: url("../images/background3.jpg");
 	width: 100%;
-	border: dotted black 1px;
+	/*border: dotted black 1px;*/
 	padding: 40px;
 	left: 0px;
 }
+
+#title{
+	font-family: 'Belgrano', serif;
+	font-size: 42px;
+	color: white;
+}
+
 
 #nav-list{
 	float: right;
 	list-style-type: none;
 	padding-top: 10px;
 	margin-right: 80px;
+	margin-top: 40px;
 }
 
 #nav-list li{
 	display: inline;
-	padding-left: 20px;
-	padding-right: 20px;
-	border: 1px solid black;
-	padding-top:20px;
-	padding-bottom: 20px;
+	padding: 30px 40px 30px 40px;
 	border-radius: 20%;
-	margin-right: 10px;
+	margin-right: 20px;
 	background-color: #71E28E;
+	font-size: 18px;
+	font-family: 'Belgrano', serif;
+	font-weight: bold;
 }
 
+#nav-list li:hover{
+	transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+	background-color: #4A9E2A;
+}
 
 
 
@@ -53,12 +78,12 @@ a{
 
 #about-container{
 	height: 575px;
-	border: solid black 1px;
+	/*border: solid black 1px;*/
 	padding: 10px;
 }
 
 #pic-container{
-	border: 5px dashed #71E28E;
+	border: 5px dashed #C18434;
 	height: 560px;
 	width: 560px;
 	display: inline-block;
@@ -74,9 +99,10 @@ a{
 	right: 5%;
 	padding: 15px;
 	text-align: center;
-	border: 5px black dashed;
+	border: 5px #C18434 dashed;
 	border-radius: 100%;
 	background-color: #71E28E;
+	opacity: .90;
 }
 
 #text-container{
@@ -84,10 +110,12 @@ a{
 	height: 500px;
 	margin: auto;
 	padding: 5px;
+	font-family: 'Belgrano', serif;
 }
 
 #text-container p{
-	font-size: 17px;
+	font-size: 15px;
+	font-family: 'Belgrano', serif;
 }
 
 
@@ -110,13 +138,14 @@ p{
 	float: right;
 	display: inline;
 	overflow-wrap: break-word;
+	font-family: 'Almonte Woodgrain';
 }
 
 
 #projects-container{
 	width: 100%;
 	display: block;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	margin: auto;
 }
 
@@ -161,8 +190,7 @@ p{
 
 .banner{
 	width: 300px;
-	border: solid 1px red;
-	background-color: #FF531F;
+	background-color: #FB7525;
 	position: relative;
 	margin: auto;
 	z-index: 3;
@@ -170,7 +198,20 @@ p{
 	top: 5px;
 	color: white;
 	font-size: 18px;
+	font-family: 'Belgrano', serif;
 	padding: 5px;
+}
+
+.banner:hover{
+	transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+	background-color: #F94C00;
+}
+
+#contact{
+	text-align: center; 
+	color: white;
+	font-family: 'Belgrano', serif;
 }
 
 
@@ -194,7 +235,7 @@ p{
 }
 
 .social-media-panel img{
-	border: solid black 2px;
+	/*border: solid black 2px;*/
 	height: 100px;
 	width: 100px;
 	margin: auto;
@@ -204,7 +245,10 @@ p{
 
 #footer-container{
 	width: 94%;
-	border: solid black 2px;
+	/*border: solid black 2px;*/
+	font-family: 'Belgrano', serif;
+	font-size: 32px;
 	padding: 40px;
 	text-align: center;
+	background-image: url("../images/background3.jpg");
 }
