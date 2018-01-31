@@ -1,16 +1,15 @@
 $(document).ready(function() {
 
-    console.log("car");
 
-    var $root = $('html, body');
-    $('#about-button').click(function() {
-        $root.animate({
-            scrollTop: $("about-container").offset().top
-        }, 500);
-        return false;
-    });
+    // $("#about-button").click(function() {
+        // $(window).scrollTop($("#projects-container").offset().top);
+    // });
 
 
-
+    $('#about-button').click(function(){
+    $('html, body').animate({
+        scrollTop: $('#about-container').offset().top
+    }, 1000);
+}); 
 
 });
