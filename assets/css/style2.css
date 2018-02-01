@@ -1,0 +1,393 @@
+
+
+/*font-family: 'Baloo Paaji', cursive;*/
+/*font-family: 'Belgrano', serif;*/
+/*font-family: 'Overlock SC', cursive;*/
+/*font-family: 'Hanalei Fill', cursive;*/
+
+
+html,body{
+	overflow-x: hidden;
+}
+
+
+body{
+	border: 1px dotted black;
+	background-image: url("../images/background5.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 0;
+	margin: 0;
+}
+
+@font-face {
+    font-family: 'Almonte'; /*a name to be used later*/
+    src: url('http://www.1001fonts.com/wood-fonts.html'); /*URL to font*/
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+#nav-container{
+	width: 100%;
+	/*border: solid black 2px;*/
+	left: 0px;
+}
+
+#nav-bar{
+	background-image: url("../images/background3.jpg");
+	width: 100%;
+	/*border: dotted black 1px;*/
+	padding: 40px;
+	left: 0px;
+}
+
+#title{
+	font-family: 'Belgrano', serif;
+	font-size: 42px;
+	color: white;
+}
+
+
+#nav-list{
+	float: right;
+	list-style-type: none;
+	padding-top: 10px;
+	margin-right: 80px;
+	margin-top: 40px;
+}
+
+#nav-list li{
+	display: inline;
+	padding: 30px 40px 30px 40px;
+	border-radius: 20%;
+	margin-right: 20px;
+	background-color: #71E28E;
+	font-size: 18px;
+	font-family: 'Belgrano', serif;
+	font-weight: bold;
+}
+
+#nav-list li:hover{
+	transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+	background-color: #4A9E2A;
+}
+
+#about-container{
+	height: 575px;
+	/*border: solid black 1px;*/
+	padding: 10px;
+}
+
+#pic-container{
+	border: 5px dashed #C18434;
+	height: 560px;
+	width: 560px;
+	display: inline-block;
+	float: left;
+	margin-left: 40px;
+	border-radius: 100%;
+}
+
+#bio-wrapper{
+	width: 550px;
+	height: 550px;
+	position: absolute;
+	right: 5%;
+	padding: 15px;
+	text-align: center;
+	border: 5px #C18434 dashed;
+	border-radius: 100%;
+	background-color: #71E28E;
+	opacity: .90;
+	/*display: none;*/
+}
+
+#text-container{
+	width: 400px;
+	height: 500px;
+	margin: auto;
+	padding: 5px;
+	font-family: 'Belgrano', serif;
+}
+
+#text-container p{
+	font-size: 15px;
+	font-family: 'Belgrano', serif;
+}
+
+
+h2{
+	display: inline-block;
+	padding-left: 10px;
+}
+
+
+img{
+	display: inline-block;
+	height: 560px;
+	width: 560px;
+	float: left;
+	border-radius: 100%;
+}
+
+
+p{
+	float: right;
+	display: inline;
+	overflow-wrap: break-word;
+	font-family: 'Almonte Woodgrain';
+}
+
+
+#projects-container{
+	width: 100%;
+	display: block;
+	/*border: 1px solid black;*/
+	margin: auto;
+}
+
+
+.project-list{
+	list-style-type: none;
+	width: 100%;
+	position: relative;
+}
+
+.project-list li{
+	display: inline-block;
+	width: 31%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+
+.project-panel{
+	height: 300px;
+	width: 300px;
+	/*border: solid black 3px;*/
+	margin: auto;
+	border-radius: 100%;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+
+
+.project-panel img{
+	height: 300px;
+	width: 300px;
+	border: solid black 2px;
+	margin: auto;
+	border-radius: 100%;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+
+.banner{
+	width: 300px;
+	background-color: #FB7525;
+	position: relative;
+	margin: auto;
+	z-index: 3;
+	text-align: center;
+	top: 5px;
+	color: white;
+	font-size: 18px;
+	font-family: 'Belgrano', serif;
+	padding: 5px;
+}
+
+.banner:hover{
+	transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+	background-color: #F94C00;
+}
+
+#contact{
+	text-align: center; 
+	color: white;
+	font-family: 'Belgrano', serif;
+}
+
+
+.social-media-list{
+	list-style-type: none;
+	width: 50%;
+	margin: auto;
+}
+
+.social-media-list li{
+	display: inline-block;
+	width: 31%;
+}
+
+
+.social-media-panel{
+	height: 100px;
+	width: 100px;
+	margin: auto;
+	border-radius: 100%;
+}
+
+.social-media-panel img{
+	/*border: solid black 2px;*/
+	height: 100px;
+	width: 100px;
+	margin: auto;
+	border-radius: 100%;
+}
+
+
+#footer-container{
+	width: 94%;
+	/*border: solid black 2px;*/
+	font-family: 'Belgrano', serif;
+	font-size: 32px;
+	padding: 40px;
+	text-align: center;
+	background-image: url("../images/background3.jpg");
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////*/
+
+
+/*Begin media queries*/
+
+
+/* ----------- Galaxy S8 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+  		#title{
+		font-size: 24px;
+		margin-left: 15%;
+		margin-top: -25%;
+	}
+
+	#nav-list{
+		float: left;
+		padding-top: 10px;
+		margin-left: -20px;
+		margin-top: -10px;
+		margin-right: 0px;
+	}
+
+	#nav-list li{
+		display: inline;
+		padding: 10px 20px 10px 20px;
+		margin-right: 5px;
+		font-size: 10px;
+	}
+
+	#pic-container{
+		height: 275px;
+		width: 275px;
+		margin-left: 30px;
+		
+	}
+
+	img{
+		height: 275px;
+		width: 275px;
+		margin: auto;
+	}
+
+	#bio-wrapper{
+		width: 275px;
+		height: 275px;
+		right: 0%;
+		padding: 10px;
+		top: 450px;
+		left:30px;
+	}
+
+	#text-container{
+		width: 200px;
+		height: 250px;
+		padding: 0px;
+	}
+
+	#text-container p{
+		font-size: 6px;
+	}
+
+	#projects-container{
+	width: 100%;
+	display: block;
+	/*border: 1px solid black;*/
+	margin: auto;
+}
+
+
+	.project-list li{
+		display: block;
+		left: 50px;
+	}
+
+
+	.project-panel{
+		height: 150px;
+		width: 150px;
+		border-radius: 100%;
+	}
+
+
+	.project-panel img{
+		height: 150px;
+		width: 150px;
+		margin-left: 20px;
+	}
+
+	.banner{
+		width: 200px;
+		font-size: 14px;
+		padding: 0px;
+	}
+
+	#contact{
+		font-size: 18px;
+	}
+
+	.social-media-list{
+		width: 90%;
+		margin-left: -20px;
+	}
+
+	.social-media-panel{
+		height: 75px;
+		width: 75px;
+	}
+
+	.social-media-panel img{
+		height: 75px;
+		width: 75px;	
+	}
+
+	#footer-container {
+		margin-left: -30px;
+		font-size: 24px;
+		text-align: center;
+	}
+
+
