@@ -1193,6 +1193,146 @@ p{
 }
 
 
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+  	#title{
+		font-size: 24px;
+		margin-left: 15%;
+		margin-top: -25%;
+	}
+
+	#nav-list{
+		float: left;
+		padding-top: 10px;
+		margin-left: -20px;
+		margin-top: -10px;
+		margin-right: 0px;
+	}
+
+	#nav-list li{
+		display: inline;
+		padding: 10px 20px 10px 20px;
+		margin-right: 5px;
+		font-size: 10px;
+	}
+
+	#pic-container{
+		height: 275px;
+		width: 275px;
+		margin-left: 30px;
+		
+	}
+
+	img{
+		height: 275px;
+		width: 275px;
+		margin: auto;
+	}
+
+	#bio-wrapper{
+		width: 275px;
+		height: 275px;
+		right: 0%;
+		padding: 10px;
+		top: 450px;
+		left:30px;
+	}
+
+	#text-container{
+		width: 200px;
+		height: 250px;
+		padding: 0px;
+	}
+
+	#text-container p{
+		font-size: 6px;
+	}
+
+	#projects-container{
+	width: 100%;
+	display: block;
+	/*border: 1px solid black;*/
+	margin: auto;
+}
+
+
+	.project-list li{
+		display: block;
+		left: 40px;
+	}
+
+
+	.project-panel{
+		height: 150px;
+		width: 150px;
+		border-radius: 100%;
+	}
+
+
+	.project-panel img{
+		height: 150px;
+		width: 150px;
+		margin-left: 20px;
+	}
+
+	.banner{
+		width: 200px;
+		font-size: 14px;
+		padding: 0px;
+	}
+
+	#contact{
+		font-size: 18px;
+	}
+
+	.social-media-list{
+		width: 90%;
+		margin-left: -20px;
+	}
+
+	.social-media-panel{
+		height: 75px;
+		width: 75px;
+	}
+
+	.social-media-panel img{
+		height: 75px;
+		width: 75px;	
+	}
+
+	#footer-container {
+		margin-left: -30px;
+		font-size: 24px;
+		text-align: center;
+	}
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 740px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+
+}
+
+
+
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
 
