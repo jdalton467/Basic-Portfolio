@@ -1209,7 +1209,7 @@ p{
   and (device-height: 740px) 
   and (-webkit-device-pixel-ratio: 4) 
   and (orientation: portrait) {
-  	#title{
+  		#title{
 		font-size: 24px;
 		margin-left: 15%;
 		margin-top: -25%;
@@ -1218,7 +1218,7 @@ p{
 	#nav-list{
 		float: left;
 		padding-top: 10px;
-		margin-left: -20px;
+		margin-left: -0px;
 		margin-top: -10px;
 		margin-right: 0px;
 	}
@@ -1272,7 +1272,7 @@ p{
 
 	.project-list li{
 		display: block;
-		left: 40px;
+		left: 50px;
 	}
 
 
@@ -1319,6 +1319,7 @@ p{
 		font-size: 24px;
 		text-align: center;
 	}
+
 
 }
 
