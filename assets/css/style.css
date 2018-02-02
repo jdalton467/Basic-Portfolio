@@ -500,6 +500,58 @@ p{
 			height: 300px;
 			width: 300px;
 		}
+
+
+	 @media only screen and (max-width : 320px) and (orientation: portrait){
+		#title{
+			font-size: 24px;
+			margin-top: -20px;
+			margin-left: 50px;
+		}
+
+		#nav-bar{
+			margin-left: -5px;
+		}
+
+		#nav-list li{
+			padding: 2px 8px 2px 8px;
+			margin-right: 5px;
+		}
+
+		#pic-container{
+			margin-left: -5px;
+			height: 300px;
+			width: 300px;
+		}
+
+		#projects-container{
+			margin-top: 170px;
+		}
+
+
+		img{
+			display: inline-block;
+			height: 300px;
+			width: 300px;
+		}
+
+		#bio-wrapper{
+			top: 110%;
+			right: 0%;
+			height: 275px;
+			width: 275px;
+		}
+
+		#text-container{
+			width: 275px;
+			height: 275px;
+			padding: 5px;
+		}
+
+		.social-media-list{
+			width: 100%;
+			margin-left: -35px;
+		}
 		
     }
 
