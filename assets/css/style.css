@@ -483,6 +483,10 @@ p{
 			width: 300px;
 		}
 
+		#projects-container{
+			margin-top: 170px;
+		}
+
 
 		img{
 			display: inline-block;
