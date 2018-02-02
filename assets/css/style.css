@@ -261,6 +261,29 @@ p{
 
 /*Desktop First*/
 /* Small Devices, Tablets */
+
+	 @media only screen and (max-width : 1024px) and (orientation: landscape) {
+		#title{
+			font-size: 32px;
+		}
+
+		#pic-container{
+			margin-left: 220px;
+		}
+
+		#bio-wrapper{
+			top: 110%;
+			right: 21%;
+		}
+
+		#projects-container{
+			margin-top: 650px;
+		}
+
+    }
+
+
+
     @media only screen and (max-width : 768px) and (orientation: portrait) {
 		#title{
 			font-size: 28px;
@@ -311,6 +334,179 @@ p{
 	
 
     }
+
+
+    @media only screen and (max-width : 740px) and (orientation: landscape) {
+
+
+		#nav-list{
+			margin-top: 25px;
+		}
+
+		#nav-list li{
+			padding: 10px 15px 10px 15px;
+		}
+
+		#pic-container{
+			margin-left: 70px;
+		}
+
+		#bio-wrapper{
+			top: 220%;
+			right: 10%;
+		}
+
+		.project-list{
+			right: 15px;
+		}
+
+		.project-panel{
+			height: 200px;
+			width: 200px;
+		}
+
+
+		.project-panel img{
+			height: 175px;
+			width: 175px;
+		}
+
+		.banner{
+			width: 200px;
+			font-size: 16px;
+			padding: 1px;
+			margin-right: 20px;
+		}
+
+    }
+	
+	 @media only screen and (max-width : 667px) and (orientation: landscape) {
+    	
+
+		#nav-list{
+			margin-top: -60px;
+		}
+
+		#nav-list li{
+			padding: 8px 13px 8px 13px;
+		}
+
+		#pic-container{
+			margin-left: 37px;
+		}
+
+		#bio-wrapper{
+			top: 210%;
+			right: 6%;
+		}
+
+
+    }
+
+	
+ @media only screen and (max-width : 640px) and (orientation: landscape) {
+    	
+
+		#nav-list{
+			margin-top: 30px;
+			margin-right: 30px;
+		}
+
+		#nav-list li{
+			padding: 8px 13px 8px 13px;
+		}
+
+		#pic-container{
+			margin-left: 25px;
+		}
+
+		#bio-wrapper{
+			top: 220%;
+			right: 4%;
+		}
+
+		.banner{
+			width: 175px;
+			font-size: 12px;
+			padding: 1px;
+			margin-right: 20px;
+		}
+		.social-media-list{
+			list-style-type: none;
+			width: 100%;
+			margin-left: -20px;
+		}
+
+
+    }
+
+     @media only screen and (max-width : 480px) and (orientation: landscape) {
+    	#title{
+    		font-size: 20px;
+    		margin-left: -20px;
+    	}	
+	
+		#nav-list{
+			margin-top: -50px;
+			margin-right: 30px;
+		}
+
+		#nav-list li{
+			padding: 5px 10px 5px 10px;
+		}
+
+		#pic-container{
+			margin-left: 20px;
+			height: 410px;
+			width: 410px;
+		}
+		img{
+			display: inline-block;
+			height: 410px;
+			width: 410px;
+			float: left;
+			border-radius: 100%;
+		}
+
+		#bio-wrapper{
+			height: 400px;
+			width: 400px;
+			top: 190%;
+			right: 4%;
+		}
+
+		#text-container{
+			width: 275px;
+			height: 275px;
+			padding: 5px;
+			margin-top: -10px;
+		}
+		#text-container p{
+			font-size: 10px;
+		}
+
+		#projects-container{
+			margin-top: 275px;
+		}
+		.project-list li{
+			display: block;
+			width: 100%;
+			margin-top: 10px;
+			margin-left: -10px;
+		}
+
+
+		.banner{
+			width: 175px;
+			font-size: 12px;
+			padding: 1px;
+			margin-left: 140px;
+		}
+
+
+    }
+	
+	
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 414px) and (orientation: portrait){
