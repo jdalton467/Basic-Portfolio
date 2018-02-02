@@ -181,7 +181,7 @@ p{
 .project-panel img{
 	height: 300px;
 	width: 300px;
-	border: solid black 2px;
+	border: 5px #C18434 dashed;
 	margin: auto;
 	border-radius: 100%;
 	display: inline-block;
